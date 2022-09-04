@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 typedef struct node {
  struct node *next;
  int vertex;
@@ -32,13 +31,11 @@ void main() {
  printAdjList();
 
  DFS(0);
- 
 }
 
 void DFS(int i)
 {
  node *p;
- 
  printf("\n%d",i);
  p=G[i];
  visited[i]=1;
@@ -53,10 +50,9 @@ void DFS(int i)
 void read_graph() {
  int i,vi,vj,no_of_edges;
  printf("Enter number of vertices:");
- 
  scanf("%d",&n);
- //initialise G[] with a null
  
+ //initialise G[] with a null
  for(i=0;i<n;i++) {
   G[i]=NULL;
    //read edges and insert them in G[]
